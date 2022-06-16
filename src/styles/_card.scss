@@ -6,13 +6,34 @@
     width: $card-width;
     min-height: $card-height;
     &:hover {
-
+        cursor: pointer;
         .card__weight,
         &::before {
             background-color: $hover-border-color;
         }
     }
-
+    &.cover{
+        &::before {
+            background-color: $disabled-border-color ;
+        }
+        &:hover {
+            .card__weight,
+            &::before {
+                background-color:  $disabled-border-color;
+            }
+        }
+    }
+    &.selected{
+        &::before {
+            background-color: $default-selected-border-color ;
+        }
+        &:hover {
+            .card__weight,
+            &::before {
+                background-color:  $hover-selected-border-color;
+            }
+        }
+    }
     &::before {
         content: "";
         position: absolute;
@@ -31,38 +52,50 @@
         min-height: $card-height - 8px;
         @extend %poligon;
         background-color: $default-card-bg-color;
-        background-image: url("../../assets/Photo.png");
-        background-repeat: no-repeat;
-        background-position: 0 100%;
-        padding: 20px 45px 120px;
+        padding: 20px 45px 270px;
     }
 
     &__description {
         font-size: $card-description-font-size;
         color: $primary-text-color;
+        @extend %cover;
+    }
+
+    &__img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        border-radius: 12px;
+        &.cover{
+            opacity: 0.5;
+        }
     }
 
     &__heading {
         margin: 5px 0 0 -2px;
         font-size: $card-heading-font-size;
         font-weight: 700;
+        @extend %cover;
     }
 
     &__info {
         font-size: $card-heading-font-size / 2;
         font-weight: 700;
         margin-bottom: 15px;
+        @extend %cover;
     }
 
     &__bonus {
         font-size: $card-heading-bonus-font-size;
         color: $primary-text-color;
+        list-style-type: none;
+        @extend %cover;
     }
 
     &__weight {
         position: absolute;
         @extend %flex;
-        align-items: center;
         flex-direction: column;
         right: 12px;
         bottom: 12px;
@@ -71,12 +104,21 @@
         height: 80px;
         background-color: $default-border-color;
         @extend %hover-effect;
+        &.selected{
+            background-color: $default-selected-border-color ;
+        }
+        &.cover{
+            background-color: $disabled-border-color ;
+        }
     }
 
     &__weight-text {
         font-size: $card-weight-font-size;
         color: $main-text-color;
         margin: -3px 0;
+        &.cover{
+            color: $main-text-color;
+        }
 
         &--small {
             font-size: $card-weight-font-size / 2;
@@ -87,9 +129,17 @@
 .footer {
     text-align: center;
     margin-top: 14px;
-    font-size: $card-heading-bonus-font-size;
+    font-size: $card-heading-bonus-font-size - 1;
     color: $main-text-color;
-
+    &--default{
+        &::after {
+            content: ".";
+            color: $default-border-color;
+        }
+    }
+    &--disabled{
+        color: $empty-text-color;
+    }
     &__btn {
         color: $default-border-color;
         border-bottom: 1px dashed currentColor;
@@ -99,9 +149,7 @@
             color: $hover-border-color;
         }
     }
-
-    &::after {
-        content: ".";
-        color: $default-border-color;
-    }
+}
+.cover{
+    cursor: not-allowed;
 }

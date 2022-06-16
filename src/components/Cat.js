@@ -1,22 +1,50 @@
+import Bonus from "./bonus/Bonus";
+import uniqid from "uniqid";
+import Footer from "./footer/Footer";
+import Weight from "./weight/Weight";
+import { useDispatch } from "react-redux";
+import { selectItem } from "../store/actions";
 
+const Cat = ({ info }) => {
+    //инициализируем диспетчер
+    const dispatch = useDispatch();
+    //извлекаем данные из пропсов
+    const {
+        id,
+        description,
+        heading,
+        nutrients,
+        additional,
+        units,
+        photo,
+        weight,
+        isSelected,
+        isDisabled } = info;
 
-const Cat = () => {
+    const onSelect = id => dispatch(selectItem(id));
+    //определяем стиль контента
+    const backGroundStyle = isDisabled
+        ? "cover"
+        : isSelected
+            ? "selected"
+            : null
+
 
     return (
-        <article className="product">
-            <div className="card">
-                <div className="card__content">
-                    <p className="card__description">Сказочное заморское яство</p>
-                    <h2 className="card__heading">Нямушка</h2>
-                    <p className="card__info">с фуа-гра</p>
-                    <p className="card__bonus">10 порций<br />мышь в подарок</p>
-                    <div className="card__weight">
-                        <p className="card__weight-text">0,5</p>
-                        <p className="card__weight-text card__weight-text--small">кг</p>
-                    </div>
+        <article className="product" >
+            <div className={`card ${backGroundStyle} `} onClick={() => onSelect(id)}>
+                <div className={`card__content ${backGroundStyle} `}>
+                    <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} alt={`${photo.img}`} />
+                    <p className={`card__description ${backGroundStyle} `}>{description}</p>
+                    <h2 className={`card__heading  ${backGroundStyle} `}>{heading}</h2>
+                    <p className={`card__info ${backGroundStyle} `}>{nutrients}</p>
+                    <ul className={`card__bonus ${backGroundStyle} `}>
+                        {units.map(item => <Bonus key={uniqid()} unit={item} />)}
+                    </ul>
+                    <Weight info={weight} backGroundStyle={backGroundStyle} />
                 </div>
             </div>
-            <p className="footer">Чего сидишь? Порадуй котэ,<button > <span className="footer__btn">купи</span></button></p>
+            <Footer info={{ additional, isSelected, isDisabled, id }} select={onSelect} />
         </article>
 
     )

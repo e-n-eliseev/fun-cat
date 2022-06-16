@@ -1,6 +1,7 @@
 %flex{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 %poligon{
     border-radius: 12px;
@@ -9,4 +10,9 @@
 }
 %hover-effect{
     transition: 0.3s ease-in-out;
+}
+%cover{
+    &.cover{
+        color:$disabled-border-color ;
+    }
 }

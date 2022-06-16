@@ -1,0 +1,10 @@
+@import "./styles/vars";
+@import 'scss-reset/_reset.scss';
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100&display=swap');
+
+body {
+  font-family: 'Trebuchet MS', sans-serif;
+  font-weight: $main-font-weight;
+  margin: 0;
+  padding: 0;
+}

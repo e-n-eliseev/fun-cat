@@ -1,0 +1,29 @@
+@import "./vars";
+@import "./mixins";
+@import "./card";
+
+.App {
+  @extend %flex;
+  padding: 0 5px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  min-height: 100vh;
+  background-image: url("../../assets/Shadow.png"), url("../../assets/Pattern.png");
+  background-size: cover, 100%;
+
+  &__heading {
+    text-align: center;
+    color: $main-text-color;
+    font-size: $main-heading-font-size;
+    font-weight: $main-heading-weight;
+    font-family: 'Exo 2', sans-serif;
+    text-shadow: 0px 1px 1px #000000;
+  }
+
+  &__main {
+    @extend %flex;
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+}

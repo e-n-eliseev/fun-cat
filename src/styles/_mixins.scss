@@ -1,0 +1,12 @@
+%flex{
+    display: flex;
+    justify-content: center;
+}
+%poligon{
+    border-radius: 12px;
+    -webkit-clip-path: polygon(45px 0, 100% 0, 100% 100%, 0 100%, 0 45px);
+    clip-path: polygon(45px 0, 100% 0, 100% 100%, 0 100%, 0 45px);
+}
+%hover-effect{
+    transition: 0.3s ease-in-out;
+}

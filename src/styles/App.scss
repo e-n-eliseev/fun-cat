@@ -1,10 +1,11 @@
 @import "./vars";
 @import "./mixins";
 @import "./card";
+@import "../components/footer/footer";
 
 .App {
   @extend %flex;
-  padding: 0 5px;
+  padding: 36px 5px;
   flex-direction: column;
   gap: 25px;
   min-height: 100vh;

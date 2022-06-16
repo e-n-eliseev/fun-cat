@@ -20,7 +20,7 @@ const Cat = ({ info }) => {
         weight,
         isSelected,
         isDisabled } = info;
-
+    //обработчик клика на область
     const onSelect = id => dispatch(selectItem(id));
     //определяем стиль контента
     const backGroundStyle = isDisabled
@@ -28,7 +28,6 @@ const Cat = ({ info }) => {
         : isSelected
             ? "selected"
             : null
-
 
     return (
         <article className="product" >

@@ -92,63 +92,7 @@
         list-style-type: none;
         @extend %cover;
     }
-
-    &__weight {
-        position: absolute;
-        @extend %flex;
-        flex-direction: column;
-        right: 12px;
-        bottom: 12px;
-        border-radius: 50%;
-        width: 80px;
-        height: 80px;
-        background-color: $default-border-color;
-        @extend %hover-effect;
-        &.selected{
-            background-color: $default-selected-border-color ;
-        }
-        &.cover{
-            background-color: $disabled-border-color ;
-        }
-    }
-
-    &__weight-text {
-        font-size: $card-weight-font-size;
-        color: $main-text-color;
-        margin: -3px 0;
-        &.cover{
-            color: $main-text-color;
-        }
-
-        &--small {
-            font-size: $card-weight-font-size / 2;
-        }
-    }
-}
-
-.footer {
-    text-align: center;
-    margin-top: 14px;
-    font-size: $card-heading-bonus-font-size - 1;
-    color: $main-text-color;
-    &--default{
-        &::after {
-            content: ".";
-            color: $default-border-color;
-        }
-    }
-    &--disabled{
-        color: $empty-text-color;
-    }
-    &__btn {
-        color: $default-border-color;
-        border-bottom: 1px dashed currentColor;
-        margin-left: 5px;
-        @extend %hover-effect;
-        &:hover {
-            color: $hover-border-color;
-        }
-    }
+    @import "../components/weight/weight";
 }
 .cover{
     cursor: not-allowed;

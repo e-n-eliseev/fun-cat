@@ -1,0 +1,31 @@
+&__weight {
+    position: absolute;
+    @extend %flex;
+    flex-direction: column;
+    right: 12px;
+    bottom: 12px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    background-color: $default-border-color;
+    @extend %hover-effect;
+    &.selected{
+        background-color: $default-selected-border-color ;
+    }
+    &.cover{
+        background-color: $disabled-border-color ;
+    }
+}
+
+&__weight-text {
+    font-size: $card-weight-font-size;
+    color: $main-text-color;
+    margin: -3px 0;
+    &.cover{
+        color: $main-text-color;
+    }
+
+    &--small {
+        font-size: $card-weight-font-size / 2;
+    }
+}

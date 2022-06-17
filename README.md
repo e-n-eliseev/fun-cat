@@ -66,7 +66,7 @@
 Следующие инструменты:
 * сборщики(Webpack);
 * плагины VS-CODE(Pretier, Emmet, EsLint и тп. );
-* для тестирования JEST;
+* для тестирования - JEST;
 * консоль, Dev tools браузера и Redux;
 * LightHouse;
 
@@ -83,7 +83,7 @@
 
 * заканчиваю обучение на факультете Frontend разработки в GeekBrains. 
 * подписан в соцсетях на соответсвующие ресурсы(https://t.me/tproger_official, https://t.me/+T2bX79ISn5M3NjIy, https://t.me/guides_js и тп).
-* смотрю видеоблоги https://www.youtube.com/c/VladilenMinin/about, https://www.youtube.com/c/YauhenKavalchuk/about и тп.
+* смотрю видеоблоги https://www.youtube.com/c/VladilenMinin/about, https://www.youtube.com/c/YauhenKavalchuk/about, https://www.youtube.com/c/frontendscience/about и тп.
 * смотрю материалы на тематических сайтах таких как https://habr.com, https://nuancesprog.ru/, https://medium.com/ и тп.
 
 
@@ -123,4 +123,7 @@ https://react-redux-app-opal.vercel.app/
 
 * приложение позволяющее управлять списком задач, использующее загрузку данных с внешнего API, Router, Hooks, реализован поиск/добавление/удаление задачи, паггинация.
 https://react-to-do-nu.vercel.app/
+
+* верстка отзывчиво-адаптивного сайта HTML/CSS(GRID,SCSS),JS
+https://e-n-eliseev.github.io/jewelry-shop/
 

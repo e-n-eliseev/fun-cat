@@ -6,7 +6,7 @@ import { getFood } from './store/selectors';
 function App() {
   //получаем данные из хранилища
   const food = useSelector(getFood, shallowEqual);
-  // console.log(food)
+
   return (
     <div className="App">
       <h1 className='App__heading'>Ты сегодня покормил кота?</h1>

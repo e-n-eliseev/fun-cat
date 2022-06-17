@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+## Для запуска приложения необходимо:
+* установить npm;
+* установить зависимости командой `npm i`;
+* вести команду `npm start`.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+-------
 
-## Available Scripts
+## Ответы на теоритические
 
-In the project directory, you can run:
+### #1 Расскажите, чем, на ваш взгляд, отличается хорошая верстка от плохой
 
-### `npm start`
+*с точки зрения пользователя:*
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* хорошая верстка не имеет артефактов( корректное отображение элементов и содержимого);
+* сайт быстро загружается;
+* может использоваться людьми с ограниченными возможностями;
+* интерфейс интуитивный и понятный;
+* красивый дизайн;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*с точки зрения менеджера проекта:*
 
-### `npm test`
+* не требуется отладки в процессе деплоя;
+* легкость масштабирования и поддержания;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*дизайнера:*
 
-### `npm run build`
+* соответсвие макету;
+* реализация планируемой интерактивности;
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+*верстальщика:*
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* SEO;
+* структурированость кода;
+* документирование кода;
+* кроссбраузерность и кроссплатформенность, отзывчиво-адаптивность;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+*клиентского программиста:*
 
-### `npm run eject`
+* так же как и у верстальщикакод должен быть документированным и структурированным;
+* модульность;
+* стандартизированный подход к наименованию классов, переменных, файлов и функций;
+* соответсвие принципам DRY KISS;
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+*серверного программиста:*
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* правильность и оптимизированность запросов к серверу;
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### #2 Опишите основные особенности верстки крупных многостраничных сайтов, дизайн которых может меняться в процессе реализации и поддержки.Расскажите о своем опыте верстки подобных сайтов: какие методологии, инструменты и технологии вы применяли на практике. 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Основные особенности: одинаковая специфичность кода(модульность, БЭМ), структурированность, адаптивность, кроссбраузерность, соответсвие принципам DRY KISS, возможность переиспользования компонентов(модульный/компонентный подход), наличие документации, unit тестов(для SPA, PWA).
 
-## Learn More
+В работе использую компонентный подход, БЭМ, препроцессоры(SCSS), проверяю на валидность и кроссбраузерность( нормализация, сброс CSS), сборщики кода(Webpack).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### #3 Опишите основные особенности верстки сайтов, которые должны одинаково хорошо отображаться как на любом современном компьютере, так и на смартфонах и планшетах под управлением iOS и Android. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+В процессе разработки использую dev toots браузера.
 
-### Code Splitting
+Для того, чтобы определить поддерживание свойств документацию MDN, онлайн ресурсы такие как https://caniuse.com/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Если не использовать сборщики, то необходимо пользоваться автопрефиксерами, транспиляторами(https://autoprefixer.github.io/ru/, Babel)
 
-### Analyzing the Bundle Size
+Для тестов на кроссбраузерность использовал Browserstack(https://www.browserstack.com/).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### #4 Расскажите, какие инструменты помогают вам экономить время в процессе написания, проверки и отладки кода
 
-### Making a Progressive Web App
+Следующие инструменты:
+* сборщики(Webpack);
+* плагины VS-CODE(Pretier, Emmet, EsLint и тп. );
+* для тестирования JEST;
+* консоль, Dev tools браузера и Redux;
+* LightHouse;
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### #5 Вам нужно понять, почему страница отображается некорректно в Safari на iOS и в IE на Windows. Код писали не вы, доступа к исходникам у вас нет. Ваши действия? 
 
-### Advanced Configuration
+Можно использовать онлайн ресурсы для тестирования кросбраузерности для запуска и отладки сайта или виртуальные машины.
+С подобным не сталкивался.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### #6 Дизайнер отдал вам макет, в котором не показано, как должны выглядеть интерактивные элементы при наведении мыши. Ваши действия?
 
-### Deployment
+Нужно уточнить у дизайнера или у менеджера и сделать в соответствии с ТЗ, если требований нет, то по согласованию с руководителем проекта можно добавить интерактивность на свое усмотрение.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### #7
 
-### `npm run build` fails to minify
+*Какие ресурсы вы используете для развития в профессиональной сфере? Приведите несколько конкретных примеров (сайты, блоги и так далее).*
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* заканчиваю обучение на факультете Frontend разработки в GeekBrains. 
+* подписан в соцсетях на соответсвующие ресурсы.
+* смотрю видеоблоги https://www.youtube.com/c/VladilenMinin/about, https://www.youtube.com/c/YauhenKavalchuk/about и тп.
+* смотрю материалы на тематических сайтах таких как https://habr.com, https://nuancesprog.ru/, https://medium.com/ и тп.
+
+
+
+*Какое направление развития вам более близко: JS-программирование, HTML/CSS верстка или и то, и другое?*
+
+Мне близко направление frontend разработки, в последствии планирую перейти в разряд fullstack.
+
+*Какие ещё области знаний, кроме тех, что непосредственно относятся к работе, вам интересны?*
+
+* семья и дети;
+* занятия спортом;
+* путешествия;
+
+
+### #8 Расскажите нам о себе и предоставьте несколько ссылок на последние работы, выполненные вами
+
+Меня зовут Евгений, мне 39 лет, женат, есть двое детей.
+
+По образованию инженер автоматизации процессов и производств.
+
+Covid внес определенные изменения в мою жизнь, появилось больше свободного времени для реализации потенциала и желания развиваться в сфере IT.
+Занимаюсь frondend разработкой на протяжении 2х лет, заканчиваю профильный факультет GeekBrains. Меня завораживает процесс создания визуальной составляющей сайтов и приложений, так как сразу вижу результат своей работы. Изучаю сопутствующие технологии, повышаю уровень компетенции имеющихся навыков.
+
+Примеры пет проектов:
+
+* приложение-личный кабинет для работы со списком контактов, реализована аутентификация, роутинг, поиск по параметрам, добавление/удаление/редактирование элемента списка.
+Используется MUI, React, Router, Redux, Type Script, FireBase.
+https://contacts-list-cabinet.vercel.app/
+
+* музыкальный плеер на React, Hooks:
+https://react-player-e-n-eliseev.vercel.app/
+
+* приложение-страница соцсети, использующее загрузку данных с внешнего API, Redux, Hooks, реализован спам фильтр(редиска, пустые поля), возможность добавлять/удалять/модифицировать комментарии
+https://react-redux-app-opal.vercel.app/
+
+* приложение позволяющее управлять списком задач, использующее загрузку данных с внешнего API, Router, Hooks, реализован поиск/добавление/удаление задачи, паггинация.
+https://react-to-do-nu.vercel.app/
+

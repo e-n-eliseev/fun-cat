@@ -7,7 +7,6 @@
   @extend %flex;
   padding: 36px 5px;
   flex-direction: column;
-  gap: 25px;
   min-height: 100vh;
   background-image: url("../assets/Shadow.png"), url("../assets/Pattern.png");
   background-size: cover, 100%;
@@ -19,11 +18,11 @@
     font-weight: $main-heading-weight;
     font-family: 'Exo 2', sans-serif;
     text-shadow: 0px 1px 1px #000000;
+    margin-bottom:24px;
   }
 
   &__main {
     @extend %flex;
-    gap: 80px;
     flex-wrap: wrap;
   }
 }

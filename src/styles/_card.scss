@@ -1,3 +1,6 @@
+.product{
+    margin-bottom: 24px;
+}
 .card {
     position: relative;
     border-radius: 12px;
@@ -5,6 +8,7 @@
     padding: 4px;
     width: $card-width;
     min-height: $card-height;
+    margin: 0 40px;
     &:hover {
         cursor: pointer;
         .card__weight,
@@ -96,4 +100,9 @@
 }
 .cover{
     cursor: not-allowed;
+}
+@media (max-width:1220px){
+    .card{
+        margin: 0 5px;
+    }
 }

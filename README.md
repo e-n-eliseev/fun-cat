@@ -55,7 +55,7 @@
 
 В процессе разработки использую dev toots браузера.
 
-Для того, чтобы определить поддерживание свойств документацию MDN, онлайн ресурсы такие как https://caniuse.com/
+Для того, чтобы определить поддержку свойств использую документацию MDN, онлайн ресурсы такие как https://caniuse.com/
 
 Если не использовать сборщики, то необходимо пользоваться автопрефиксерами, транспиляторами(https://autoprefixer.github.io/ru/, Babel)
 
@@ -84,7 +84,7 @@
 * заканчиваю обучение на факультете Frontend разработки в GeekBrains. 
 * подписан в соцсетях на соответсвующие ресурсы(https://t.me/tproger_official, https://t.me/+T2bX79ISn5M3NjIy, https://t.me/guides_js и тп).
 * смотрю видеоблоги https://www.youtube.com/c/VladilenMinin/about, https://www.youtube.com/c/YauhenKavalchuk/about, https://www.youtube.com/c/frontendscience/about и тп.
-* смотрю материалы на тематических сайтах таких как https://habr.com, https://nuancesprog.ru/, https://medium.com/ и тп.
+* изучаю материалы на тематических сайтах таких как https://habr.com, https://nuancesprog.ru/, https://medium.com/ и тп.
 
 
 

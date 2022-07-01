@@ -39,7 +39,7 @@ const Cat = ({ info }) => {
             <div className={`card ${backGroundStyle} `} onClick={() => onSelect(id)} onMouseEnter={onHowerChange} onMouseLeave={() => setHowerText(true)}>
                 <div className={`card__content ${backGroundStyle} `}>
                     <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} srcSet={`${photo.img3x} 1.25x`} alt={`${photo.img}`} loading="lazy" />
-                    <p className={`card__description ${backGroundStyle} ${howerText ? null : "card__description--hover"} `}>{howerText ? description[0] : description[1]}</p>
+                    <p className={`card__description ${backGroundStyle} ${howerText ? null : isSelected ? "card__description--hover" : null} `}>{howerText ? description[0] : isSelected ? description[1] : description[0]}</p>
                     <h2 className={`card__heading  ${backGroundStyle} `}>{heading}</h2>
                     <p className={`card__info ${backGroundStyle} `}>{nutrients}</p>
                     <ul className={`card__bonus ${backGroundStyle} `}>

@@ -4,10 +4,12 @@ import Footer from "./footer/Footer";
 import Weight from "./weight/Weight";
 import { useDispatch } from "react-redux";
 import { selectItem } from "../store/actions";
+import { useState } from "react";
 
 const Cat = ({ info }) => {
     //инициализируем диспетчер
     const dispatch = useDispatch();
+    const [howerText, setHowerText] = useState(true)
     //извлекаем данные из пропсов
     const {
         id,
@@ -22,6 +24,9 @@ const Cat = ({ info }) => {
         isDisabled } = info;
     //обработчик клика на область
     const onSelect = id => dispatch(selectItem(id));
+    const onHowerChange = () => {
+        if (isSelected) setHowerText(false);
+    }
     //определяем стиль контента
     const backGroundStyle = isDisabled
         ? "cover"
@@ -31,10 +36,10 @@ const Cat = ({ info }) => {
 
     return (
         <article className="product" >
-            <div className={`card ${backGroundStyle} `} onClick={() => onSelect(id)}>
+            <div className={`card ${backGroundStyle} `} onClick={() => onSelect(id)} onMouseEnter={onHowerChange} onMouseLeave={() => setHowerText(true)}>
                 <div className={`card__content ${backGroundStyle} `}>
-                    <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} alt={`${photo.img}`} />
-                    <p className={`card__description ${backGroundStyle} `}>{description}</p>
+                    <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} srcSet={`${photo.img3x} 1.25x`} alt={`${photo.img}`} loading="lazy" />
+                    <p className={`card__description ${backGroundStyle} ${howerText ? null : "card__description--hover"} `}>{howerText ? description[0] : description[1]}</p>
                     <h2 className={`card__heading  ${backGroundStyle} `}>{heading}</h2>
                     <p className={`card__info ${backGroundStyle} `}>{nutrients}</p>
                     <ul className={`card__bonus ${backGroundStyle} `}>

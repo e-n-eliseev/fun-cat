@@ -63,6 +63,9 @@
         font-size: $card-description-font-size;
         color: $primary-text-color;
         @extend %cover;
+        &--hover{
+            color: $hover-selected-description-color;
+        }
     }
 
     &__img{
@@ -94,6 +97,10 @@
         color: $primary-text-color;
         list-style-type: none;
         @extend %cover;
+        
+    }
+    &__units{
+        font-weight: 700;
     }
     @import "../components/weight/weight";
 }

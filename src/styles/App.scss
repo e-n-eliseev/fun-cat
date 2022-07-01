@@ -8,8 +8,13 @@
   padding: 36px 5px;
   flex-direction: column;
   min-height: 100vh;
-  background-image: url("../assets/Shadow.png"), url("../assets/Pattern.png");
-  background-size: cover, 100%;
+  //background-image: url("../assets/Shadow.png"), url("../assets/Pattern.png");
+  background-image: linear-gradient(to top, $card-heading-color,rgba($card-heading-color, 0.01),$card-heading-color), url("../assets/Pattern.png");
+  @media (min-resolution: 1.25dppx) {
+    background-image: linear-gradient(to top, $card-heading-color,rgba($card-heading-color, 0.01),$card-heading-color), url("../assets/Pattern@3x.png");
+  }
+  background-repeat: no-repeat, repeat;
+  //background-size: cover, 100%;
 
   &__heading {
     text-align: center;

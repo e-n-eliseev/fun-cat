@@ -3,7 +3,7 @@ const Bonus = ({ unit }) => {
 
     return (
         <li>
-            <strong>{unit.quantity}</strong> {unit.dimensions}
+            <span className="card__units">{unit.quantity}</span> {unit.dimensions}
         </li>
     )
 }

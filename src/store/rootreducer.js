@@ -2,11 +2,12 @@ import uniqid from "uniqid";
 import cloneDeep from "lodash/cloneDeep";
 import { SELECT_ITEM } from "./types";
 import photo from "../assets/Photo.png"
+import photo3x from "../assets/Photo@3x.png";
 
 const initialState = [
     {
         id: uniqid(),
-        description: "Сказочное заморское яство",
+        description: ["Сказочное заморское яство", "Котэ не одобряет?"],
         heading: "Нямушка",
         nutrients: "с фуа-гра",
         additional: "Печень утки разварная с артишоками.",
@@ -22,7 +23,8 @@ const initialState = [
         ],
         photo: {
             img: photo,
-            alt: "Фото кота"
+            alt: "Фото кота",
+            img3x: photo3x
         },
         weight: {
             weight: 0.5,
@@ -33,7 +35,7 @@ const initialState = [
     },
     {
         id: uniqid(),
-        description: "Сказочное заморское яство",
+        description: ["Сказочное заморское яство", "Котэ не одобряет?"],
         heading: "Нямушка",
         nutrients: "с рыбой",
         additional: "Головы щучьи с чесноком да свежайшая сёмгушка.",
@@ -49,7 +51,8 @@ const initialState = [
         ],
         photo: {
             img: photo,
-            alt: "Фото кота"
+            alt: "Фото кота",
+            img3x: photo3x
         },
         weight: {
             weight: 2,
@@ -60,7 +63,7 @@ const initialState = [
     },
     {
         id: uniqid(),
-        description: "Сказочное заморское яство",
+        description: ["Сказочное заморское яство", "Котэ не одобряет?"],
         heading: "Нямушка",
         nutrients: "с курой",
         additional: "Филе из цыплят с трюфелями в бульоне.",
@@ -80,7 +83,8 @@ const initialState = [
         ],
         photo: {
             img: photo,
-            alt: "Фото кота"
+            alt: "Фото кота",
+            img3x: photo3x
         },
         weight: {
             weight: 5,

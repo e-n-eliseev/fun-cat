@@ -38,7 +38,7 @@ const Cat = ({ info }) => {
         <article className="product" >
             <div className={`card ${backGroundStyle} `} onClick={() => onSelect(id)} onMouseEnter={onHowerChange} onMouseLeave={() => setHowerText(true)}>
                 <div className={`card__content ${backGroundStyle} `}>
-                    <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} srcSet={`${photo.img3x} 1.25x`} alt={`${photo.img}`} loading="lazy" />
+                    <img className={`card__img ${backGroundStyle} `} src={`${photo.img}`} srcSet={`${photo.img2x} 2x, ${photo.img3x} 3x `} alt={`${photo.img}`} loading="lazy" />
                     <p className={`card__description ${backGroundStyle} ${howerText ? null : isSelected ? "card__description--hover" : null} `}>{howerText ? description[0] : isSelected ? description[1] : description[0]}</p>
                     <h2 className={`card__heading  ${backGroundStyle} `}>{heading}</h2>
                     <p className={`card__info ${backGroundStyle} `}>{nutrients}</p>

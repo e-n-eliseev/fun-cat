@@ -10,7 +10,10 @@
   min-height: 100vh;
   //background-image: url("../assets/Shadow.png"), url("../assets/Pattern.png");
   background-image: linear-gradient(to top, $card-heading-color,rgba($card-heading-color, 0.01),$card-heading-color), url("../assets/Pattern.png");
-  @media (min-resolution: 1.25dppx) {
+  @media (min-resolution: 2dppx) {
+    background-image: linear-gradient(to top, $card-heading-color,rgba($card-heading-color, 0.01),$card-heading-color), url("../assets/Pattern@2x.png");
+  }
+  @media (min-resolution: 3dppx) {
     background-image: linear-gradient(to top, $card-heading-color,rgba($card-heading-color, 0.01),$card-heading-color), url("../assets/Pattern@3x.png");
   }
   background-repeat: no-repeat, repeat;

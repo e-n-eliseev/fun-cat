@@ -2,6 +2,7 @@ import uniqid from "uniqid";
 import cloneDeep from "lodash/cloneDeep";
 import { SELECT_ITEM } from "./types";
 import photo from "../assets/Photo.png"
+import photo2x from "../assets/Photo@2x.png";
 import photo3x from "../assets/Photo@3x.png";
 
 const initialState = [
@@ -24,6 +25,7 @@ const initialState = [
         photo: {
             img: photo,
             alt: "Фото кота",
+            img2x: photo2x,
             img3x: photo3x
         },
         weight: {
@@ -52,6 +54,7 @@ const initialState = [
         photo: {
             img: photo,
             alt: "Фото кота",
+            img2x: photo2x,
             img3x: photo3x
         },
         weight: {
@@ -84,6 +87,7 @@ const initialState = [
         photo: {
             img: photo,
             alt: "Фото кота",
+            img2x: photo2x,
             img3x: photo3x
         },
         weight: {
